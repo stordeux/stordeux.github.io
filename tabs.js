@@ -14,6 +14,12 @@
   function show() {
     var tab = tabOf(location.hash);
     panels.forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-tab') === tab); });
+    // Les vidéos d'un onglet masqué au chargement ne démarrent pas toujours seules
+    document.querySelectorAll('[data-tab] video').forEach(function (v) {
+      if (v.closest('[data-tab]').classList.contains('on')) {
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+      } else { v.pause(); }
+    });
     links.forEach(function (a) {
       var on = a.getAttribute('href') === '#' + tab;
       a.classList.toggle('active', on);

@@ -268,5 +268,5 @@ ol.pubs li {
   margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
   padding: .8rem; box-shadow: var(--shadow);
 }
-.video-card video { display: block; width: 100%; height: auto; border-radius: 8px; background: #fff; }
+.video-card video { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 672; border-radius: 8px; background: #fff; }
 .video-card figcaption { color: var(--muted); font-size: .9rem; margin-top: .5rem; text-align: center; }
