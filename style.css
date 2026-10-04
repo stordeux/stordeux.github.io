@@ -240,3 +240,9 @@ ol.pubs li {
   .logos { gap: 1.25rem 1.75rem; }
   .logos img { max-height: 36px; }
 }
+
+/* Exposés */
+.talk-conf { --cat: var(--c-art); }
+.talk-sem  { --cat: var(--c-comm); }
+.talk-pub  { --cat: var(--warm); }
+.badge.inv { background: var(--c-these); }
