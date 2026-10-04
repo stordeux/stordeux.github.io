@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sébastien Tordeux</title>
+<meta name="description" content="Sébastien Tordeux — Professeur de mathématiques appliquées, Université de Pau et des Pays de l'Adour, LMAP, équipe Inria Makutu. Propagation d'ondes, méthodes de Trefftz, analyse asymptotique.">
+<link rel="icon" href="img/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Langue : choix mémorisé, sinon langue du navigateur
+  (function () {
+    var l;
+    try { l = localStorage.getItem('lang'); } catch (e) {}
+    if (!l) l = (navigator.language || 'fr').slice(0, 2) === 'fr' ? 'fr' : 'en';
+    document.documentElement.lang = l;
+  })();
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#">S. Tordeux</a>
+    <ul class="menu">
+      <li><a href="#recherche"><span data-l="fr">Recherche</span><span data-l="en">Research</span></a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#encadrement"><span data-l="fr">Encadrement</span><span data-l="en">Students</span></a></li>
+      <li><a href="#enseignement"><span data-l="fr">Enseignement</span><span data-l="en">Teaching</span></a></li>
+      <li><a href="#codes">Codes</a></li>
+      <li><a href="#parcours"><span data-l="fr">Parcours</span><span data-l="en">CV</span></a></li>
+    </ul>
+    <button id="lang-toggle" class="lang" type="button" aria-label="Changer de langue / Switch language">
+      <span data-l="fr">EN</span><span data-l="en">FR</span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <img class="photo" src="img/photo.jpg" alt="Sébastien Tordeux" width="118" height="118">
+  <div>
+    <h1>Sébastien Tordeux</h1>
+    <p class="role">
+      <span data-l="fr">Professeur des universités en mathématiques appliquées</span>
+      <span data-l="en">Professor of Applied Mathematics</span>
+    </p>
+    <p class="affil">
+      <a href="https://lma-umr5142.univ-pau.fr/">LMAP UMR 5142</a> (UPPA/CNRS) ·
+      <a href="https://team.inria.fr/makutu/"><span data-l="fr">Équipe-projet Inria</span><span data-l="en">Inria project-team</span> Makutu</a><br>
+      <span data-l="fr">Université de Pau et des Pays de l'Adour</span><span data-l="en">University of Pau and Pays de l'Adour</span>
+    </p>
+    <ul class="links">
+      <li><a href="mailto:sebastien.tordeux@univ-pau.fr">sebastien.tordeux@univ-pau.fr</a></li>
+      <li><a href="https://hal.science/search/index/?q=authIdHal_s:sebastien-tordeux">HAL</a></li>
+      <li><a href="https://orcid.org/0000-0002-1357-8472">ORCID</a></li>
+      <li><a href="https://www.idref.fr/085221473">IdRef</a></li>
+      <li><a href="https://github.com/stordeux">GitHub</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ RECHERCHE ============ -->
+<section id="recherche">
+  <h2><span data-l="fr">Recherche</span><span data-l="en">Research</span></h2>
+
+  <p class="tags">
+    <span data-l="fr">Analyse numérique · Analyse appliquée des phénomènes de propagation d'ondes · Éléments finis volumiques et de frontière · Développements asymptotiques raccordés · Modélisation multi-échelle · Modèles réduits</span>
+    <span data-l="en">Numerical analysis · Applied analysis of wave propagation · Volume and boundary finite elements · Matched asymptotic expansions · Multiscale modelling · Reduced-order models</span>
+  </p>
+
+  <h3><span data-l="fr">Thèmes</span><span data-l="en">Topics</span></h3>
+  <ul class="themes">
+    <li>
+      <strong><span data-l="fr">Méthodes de Trefftz, quasi-Trefftz et UWVF</span><span data-l="en">Trefftz, quasi-Trefftz and UWVF methods</span></strong>
+      <span data-l="fr">en acoustique, aéroacoustique, électromagnétisme et poro-élasticité ; décomposition de domaine et solveurs itératifs.</span>
+      <span data-l="en">for acoustics, aeroacoustics, electromagnetics and poroelasticity; domain decomposition and iterative solvers.</span>
+      <span class="who"><span data-l="fr">avec</span><span data-l="en">with</span> H. Barucq, A. Bendali, J. Diaz, S. Pernet, G. Sylvand, L.-M. Imbert-Gérard</span>
+    </li>
+    <li>
+      <strong><span data-l="fr">Propagation des ondes acoustiques</span><span data-l="en">Acoustic wave propagation</span></strong>
+      <span data-l="fr">: modélisation des parois multiperforées, modèles d'impédance, conductivité de Rayleigh</span>
+      <span data-l="en">: multiperforated walls, impedance models, Rayleigh conductivity</span>
+      (<a href="http://apam.cerfacs.fr/index.html">ANR APAM</a>).
+    </li>
+    <li>
+      <strong><span data-l="fr">Diffraction multiple par de petits obstacles</span><span data-l="en">Multiple scattering by small obstacles</span></strong>
+      <span class="who"><span data-l="fr">avec</span><span data-l="en">with</span> J. Labat, V. Péron</span>
+      — <a href="exposes/JOSO_pres.pdf"><span data-l="fr">exposé</span><span data-l="en">talk</span> (PDF)</a>
+    </li>
+    <li>
+      <strong><span data-l="fr">Conditions aux limites absorbantes pour les objets allongés</span><span data-l="en">Absorbing boundary conditions for elongated objects</span></strong>
+      <span data-l="fr">(frontières sphéroïdales en dimension 3)</span><span data-l="en">(spheroidal boundaries in 3D)</span>
+      — <a href="http://stordeux.perso.univ-pau.fr/spheroidal.html"><span data-l="fr">page dédiée</span><span data-l="en">dedicated page</span></a>
+    </li>
+    <li>
+      <strong><span data-l="fr">Théorie de la propagation des ondes élastiques</span><span data-l="en">Elastic wave propagation theory</span></strong>
+      : <span data-l="fr">opérateur de Günter</span><span data-l="en">the Günter operator</span>
+      (<a href="https://hal.science/hal-01395952">hal-01395952</a>).
+    </li>
+  </ul>
+  <p class="aside"><a href="exposes/EXPOSE_ONERA.pdf"><span data-l="fr">Exposé ONERA</span><span data-l="en">ONERA talk</span> (PDF)</a></p>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications">
+  <h2>Publications</h2>
+  <p class="aside">
+    <span data-l="fr">Liste générée automatiquement depuis</span><span data-l="en">List generated automatically from</span>
+    <a href="https://hal.science/search/index/?q=authIdHal_s:sebastien-tordeux">HAL</a>.
+  </p>
+  <div class="pub-controls">
+    <input id="pub-search" type="search" placeholder="Rechercher… / Search…" aria-label="Rechercher dans les publications">
+    <div id="pub-filters" class="chips" role="group"></div>
+  </div>
+  <p id="pub-status" class="aside"></p>
+  <div id="pub-list"></div>
+</section>
+
+<!-- ============ ENCADREMENT ============ -->
+<section id="encadrement">
+  <h2><span data-l="fr">Encadrement doctoral</span><span data-l="en">PhD supervision</span></h2>
+
+  <h3><span data-l="fr">Thèses en cours</span><span data-l="en">Ongoing</span></h3>
+  <ul class="phd">
+    <li><b>Maïlys Lassale</b> <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> S. Pernet)</span> — <i>Vers une méthode de Trefftz nativement adaptée à la modélisation numérique exascale des ondes électromagnétiques</i>. <span class="fund"><span data-l="fr">Bourse</span><span data-l="en">Funding:</span> DGA</span></li>
+    <li><b>Andréa Lagardère</b>, 2024– <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> G. Sylvand, L.-M. Imbert-Gérard)</span> — <i>Méthode quasi-Trefftz couplée pour l'aéroacoustique</i>. <span class="fund">CIFRE Airbus</span></li>
+  </ul>
+
+  <h3><span data-l="fr">Thèses soutenues</span><span data-l="en">Completed</span></h3>
+  <ul class="phd">
+    <li><b>Matthias Rivet</b>, 2022–2025 <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> S. Pernet)</span> — <i><span data-l="fr">Optimisation des méthodes de Trefftz / quasi-Trefftz pour la résolution itérative de problèmes d'ondes harmoniques</span><span data-l="en">Optimization of Trefftz / quasi-Trefftz methods for the iterative solution of time-harmonic wave problems</span></i>. <span class="fund"><span data-l="fr">Bourse</span><span data-l="en">Funding:</span> AMX, UPPA</span></li>
+    <li><b>Ibrahima Djiba</b>, 2021–2025 <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> H. Barucq)</span> — <i><span data-l="fr">Décomposition de domaine par méthode de Trefftz pour la propagation d'ondes en milieux poro-élastiques</span><span data-l="en">Trefftz-based domain decomposition for wave propagation in poroelastic media</span></i>. <span class="fund">Carnot Isifor</span></li>
+    <li><b>Margot Sirdey</b>, 2019–2022 <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> S. Pernet, ONERA)</span> — <i><span data-l="fr">Méthodes de Trefftz pour l'électromagnétisme</span><span data-l="en">Trefftz methods for electromagnetics</span></i>. <span class="fund">E2S-UPPA, ONERA</span></li>
+    <li><b>Nathan Rouxelin</b>, 2018–2021 <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> H. Barucq)</span> — <i>Modélisation et simulation numérique de la propagation des ondes acoustiques sous la surface du soleil</i>. <a href="http://www.theses.fr/s208627">theses.fr</a></li>
+    <li><b>Justine Labat</b>, 2019 <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> V. Péron)</span> — <i>Modélisation asymptotique d'un problème de diffraction d'ondes électromagnétiques par de petits obstacles</i>.</li>
+    <li><b>Vincent Popie</b>, 2015 <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> E. Piot, ONERA)</span> — <i>Modélisation asymptotique de la réponse acoustique de plaques perforées dans un cadre linéaire avec étude des effets visqueux</i>. <span class="fund">DGA-ONERA</span> · <a href="https://www.theses.fr/2016ESAE0001">theses.fr</a></li>
+    <li><b>Vanessa Mattesi</b>, 2014 — <i>Propagation des ondes dans un domaine comportant des petites hétérogénéités : modélisation asymptotique et calcul numérique</i>. <span class="fund"><span data-l="fr">Région Aquitaine</span><span data-l="en">Aquitaine Region</span>-Inria</span> · <a href="http://www.theses.fr/2014PAUU3026">theses.fr</a></li>
+    <li><b>Kersten Schmidt</b>, 2008 <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> R. Hiptmair, C. Schwab, ETH Zürich)</span> — <i>High order numerical modelling of highly conducting thin sheets</i>.</li>
+    <li><b>Abdelkader Makhlouf</b>, 2008 <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> A. Bendali, INSA Toulouse)</span> — <i>Justification et amélioration de modèles d'antennes patch par la méthode des développements asymptotiques raccordés</i>.</li>
+  </ul>
+</section>
+
+<!-- ============ ENSEIGNEMENT ============ -->
+<section id="enseignement">
+  <h2><span data-l="fr">Enseignement</span><span data-l="en">Teaching</span></h2>
+  <p>
+    <span data-l="fr">Responsable du Master 1</span><span data-l="en">Head of the first year (M1) of the Master's programme</span>
+    <a href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/master-14/master-mathematiques-et-applications-program-84-1-2-2/m1-m2-parcours-mathematiques-modelisation-et-simulation-mms-subprogram-136-1.html"><span data-l="fr">Mathématiques, Modélisation et Simulation (MMS)</span><span data-l="en">Mathematics, Modelling and Simulation (MMS)</span></a>.
+  </p>
+
+  <h3><span data-l="fr">Polycopiés</span><span data-l="en">Lecture notes</span> (PDF)</h3>
+  <ul class="docs">
+    <li><a href="cours/Algebre_numerique.pdf"><span data-l="fr">Algèbre numérique</span><span data-l="en">Numerical linear algebra</span></a></li>
+    <li><a href="cours/L3_Lp_Fourier.pdf"><span data-l="fr">Espaces de Lebesgue et transformée de Fourier (L3)</span><span data-l="en">Lebesgue spaces and Fourier transform (L3)</span></a></li>
+    <li><a href="cours/AN1.pdf"><span data-l="fr">Méthode des différences finies</span><span data-l="en">Finite difference method</span></a></li>
+    <li><a href="cours/fonctions_plusieurs_variables.pdf"><span data-l="fr">Fonctions de plusieurs variables</span><span data-l="en">Functions of several variables</span></a></li>
+    <li><a href="cours/optimisation.pdf"><span data-l="fr">Optimisation continue et théorie lagrangienne</span><span data-l="en">Continuous optimization and Lagrangian theory</span></a></li>
+    <li><a href="cours/opti_num.pdf"><span data-l="fr">Optimisation numérique</span><span data-l="en">Numerical optimization</span></a></li>
+    <li><a href="cours/ondes_M2.pdf"><span data-l="fr">Analyse mathématique de la propagation des ondes (M2)</span><span data-l="en">Mathematical analysis of wave propagation (M2)</span></a></li>
+    <li><a href="cours/polymr2.pdf"><span data-l="fr">Analyse asymptotique</span><span data-l="en">Asymptotic analysis</span></a></li>
+  </ul>
+</section>
+
+<!-- ============ CODES ============ -->
+<section id="codes">
+  <h2>Codes</h2>
+  <ul class="docs">
+    <li>
+      <a href="https://github.com/stordeux/CODE_EF_2D_UPPA">CODE_EF_2D_UPPA</a> —
+      <span data-l="fr">un code d'éléments finis 2D pour mes cours à l'UPPA.</span>
+      <span data-l="en">a 2D finite element code for my courses at UPPA.</span>
+    </li>
+    <li>
+      <a href="https://github.com/stordeux/matrice-netflix">matrice-netflix</a> —
+      <span data-l="fr">collecte anonyme de notes de films pour un projet de complétion de matrice.</span>
+      <span data-l="en">anonymous movie-rating collection for a matrix completion project.</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ============ PARCOURS ============ -->
+<section id="parcours">
+  <h2><span data-l="fr">Parcours</span><span data-l="en">Career</span></h2>
+  <dl class="cv">
+    <dt>2025–</dt>
+    <dd><span data-l="fr">Professeur des universités, UPPA (demi-délégation Inria 2025–2026)</span><span data-l="en">Full Professor, UPPA (half-time secondment to Inria 2025–2026)</span></dd>
+    <dt>2010–2025</dt>
+    <dd><span data-l="fr">Maître de conférences, UPPA — chaire d'excellence 2010–2015, HDR 2012, demi-délégations Inria 2017–2019 et 2020–2021</span><span data-l="en">Associate Professor, UPPA — excellence chair 2010–2015, habilitation (HDR) 2012, half-time secondments to Inria 2017–2019 and 2020–2021</span></dd>
+    <dt>2006–2010</dt>
+    <dd><span data-l="fr">Maître de conférences, IMT / INSA Toulouse</span><span data-l="en">Associate Professor, IMT / INSA Toulouse</span></dd>
+    <dt>2005–2006</dt>
+    <dd><span data-l="fr">Post-doctorat, ETH Zürich</span><span data-l="en">Postdoc, ETH Zürich</span></dd>
+    <dt>2001–2004</dt>
+    <dd><span data-l="fr">Doctorat en mathématiques appliquées, Inria Rocquencourt (dir. Patrick Joly)</span><span data-l="en">PhD in applied mathematics, Inria Rocquencourt (advisor Patrick Joly)</span></dd>
+    <dt>1998–2001</dt>
+    <dd><span data-l="fr">Ingénieur ENSTA ; DEA de mathématiques appliquées, Université de Versailles-Saint-Quentin</span><span data-l="en">ENSTA engineering degree; DEA (MSc) in applied mathematics, University of Versailles-Saint-Quentin</span></dd>
+  </dl>
+
+  <h3><span data-l="fr">Responsabilités</span><span data-l="en">Responsibilities</span></h3>
+  <ul class="plain">
+    <li><span data-l="fr">Membre élu du Conseil national des universités, section 26 (2011–2015, 2019)</span><span data-l="en">Elected member of the French National Council of Universities, section 26 (2011–2015, 2019)</span></li>
+    <li><span data-l="fr">Responsable du Master 1 MMS (2012–2014, depuis 2019), du Master 2 MMS (2018–2019)</span><span data-l="en">Head of Master 1 MMS (2012–2014, since 2019), Master 2 MMS (2018–2019)</span></li>
+  </ul>
+
+  <h3><span data-l="fr">Organisation de conférences</span><span data-l="en">Conference organisation</span></h3>
+  <ul class="plain">
+    <li>2017 — <span data-l="fr">Journée en hommage à Abderrahmane Bendali, UPPA (avec J. Diaz, H. Barucq)</span><span data-l="en">Workshop in memory of Abderrahmane Bendali, UPPA (with J. Diaz, H. Barucq)</span></li>
+    <li>2016 — <span data-l="fr">Secrétaire du comité scientifique, Journées des Ondes du Sud-Ouest, UPPA</span><span data-l="en">Scientific committee secretary, Journées des Ondes du Sud-Ouest, UPPA</span></li>
+    <li>2015 — <span data-l="fr">Comité scientifique,</span><span data-l="en">Scientific committee,</span> Differential Equations and Mathematical Modeling, Ulan-Ude</li>
+    <li>2012 — First Russian-French Conference on Mathematical Geophysics (<span data-l="fr">avec</span><span data-l="en">with</span> H. Barucq, J. Diaz)</li>
+    <li>2009 — Multiscale Asymptotics and Computational Approximation, ENS Cachan</li>
+    <li>2008–2010 — <span data-l="fr">Séminaire</span><span data-l="en">Seminar</span> « Ondes et Structures », <span data-l="fr">Institut de Mathématiques de Toulouse</span><span data-l="en">Toulouse Mathematics Institute</span></li>
+  </ul>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <h2>Contact</h2>
+  <address>
+    LMAP UMR 5142 — <span data-l="fr">2e étage, bâtiment IPRA</span><span data-l="en">2nd floor, IPRA building</span><br>
+    Université de Pau et des Pays de l'Adour<br>
+    Avenue de l'Université, BP 1155 — 64013 Pau Cedex, France<br>
+    <a href="mailto:sebastien.tordeux@univ-pau.fr">sebastien.tordeux@univ-pau.fr</a>
+  </address>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  © Sébastien Tordeux ·
+  <span data-l="fr">Publications à jour via l'API HAL</span><span data-l="en">Publications kept up to date via the HAL API</span>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="hal.js"></script>
+</body>
+</html>
