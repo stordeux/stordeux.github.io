@@ -1,10 +1,11 @@
-# Met à jour les polycopiés du site depuis Dropbox, puis publie.
+﻿# Met à jour les polycopiés du site depuis Dropbox, puis publie.
 # Usage : powershell -File maj_polys.ps1
 # Ajouter une ligne dans $polys quand un poly a une source Dropbox ; le nom de destination ne doit jamais changer.
 
 $dropbox = "C:\Users\stordeux\Dropbox\COURS"
 $polys = @{
     "Algebre_numerique.pdf" = "$dropbox\ANALYSE_NUMERIQUE\ALGEBRE NUMERIQUE\POLY_ALGEBRE\Algebre_numerique.pdf"
+    "AN2.pdf" = "$dropbox\ANALYSE_NUMERIQUE\Différences_Finies\AN2.pdf"
 }
 
 Set-Location $PSScriptRoot
