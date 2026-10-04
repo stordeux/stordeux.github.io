@@ -261,3 +261,12 @@ ol.pubs li {
 .real p { margin: .3rem 0; font-size: .93rem; }
 .real .pub-links { margin-left: 0; }
 @media (max-width: 640px) { .realisations { grid-template-columns: 1fr; } }
+
+/* Vidéos */
+.videos { display: grid; gap: 1.2rem; }
+.video-card {
+  margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: .8rem; box-shadow: var(--shadow);
+}
+.video-card video { display: block; width: 100%; height: auto; border-radius: 8px; background: #fff; }
+.video-card figcaption { color: var(--muted); font-size: .9rem; margin-top: .5rem; text-align: center; }
