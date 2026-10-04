@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Objets allongés — S. Tordeux</title>
+<meta name="description" content="Conditions aux limites absorbantes d’ordre arbitraire sur une frontière sphéroïdale pour la diffraction par des objets allongés.">
+<link rel="icon" href="img/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>(function(){var l;try{l=localStorage.getItem('lang')}catch(e){}if(!l)l=(navigator.language||'fr').slice(0,2)==='fr'?'fr':'en';document.documentElement.lang=l})();</script>
+<style>
+  .page-hero h1 { font-size: 2rem; margin: 0 0 .5rem; }
+  .page-hero .authors { color: #ffd9ae; font-weight: 500; margin: 0; }
+  .lead { font-size: 1.05rem; }
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; }
+  figcaption { color: var(--muted); font-size: .88rem; margin-top: .4rem; text-align: center; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; box-shadow: var(--shadow); }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .pair div { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .stack { display: grid; gap: 1.2rem; margin-top: 1rem; }
+  .ref { max-width: 520px; margin: 0 auto; width: 100%; }
+  .ymns { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
+  .ymn img { max-width: 120px; margin: 0 auto; }
+  .ymn figcaption { margin-top: .1rem; font-size: .8rem; }
+  .back { display: inline-block; margin-top: 1.5rem; font-weight: 500; }
+  @media (max-width: 640px) { .pair div { grid-template-columns: 1fr; } .ymns { grid-template-columns: repeat(2, 1fr); } .page-hero h1 { font-size: 1.6rem; } }
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html">S. Tordeux</a>
+    <ul class="menu"><li><a href="index.html#accueil">← <span data-l="fr">Retour au site</span><span data-l="en">Back to main site</span></a></li></ul>
+    <button id="lang-toggle" class="lang" type="button" aria-label="Changer de langue / Switch language"><span data-l="fr">EN</span><span data-l="en">FR</span></button>
+  </div>
+</nav>
+
+<header class="hero page-hero">
+  <div class="wrap">
+    <h1><span data-l="fr">Conditions aux limites absorbantes pour les objets allongés</span><span data-l="en">Absorbing boundary conditions for elongated objects</span></h1>
+    <p class="authors">Hélène Barucq, M’Barek Fares, Anne-Gaëlle Dupouy Saint-Guirons, Sébastien Tordeux</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C180,80 360,0 540,30 C720,60 900,10 1080,35 C1260,60 1350,30 1440,40 L1440,80 L0,80 Z"/></svg>
+</header>
+
+<main class="wrap">
+<section>
+  <p class="lead">
+    <span data-l="fr">Lorsque l’on cherche à calculer le champ diffracté par un objet rigide, il est classique de restreindre le domaine de calcul à une boule de rayon R et de poser des conditions absorbantes sur sa frontière. Ce choix de frontière fictive n’est pas du tout optimal lorsque l’objet diffractant est allongé dans une direction. Nous avons montré qu’il est possible de construire des conditions aux limites absorbantes d’ordre arbitraire sur une frontière sphéroïdale en dimension 3.</span>
+    <span data-l="en">To compute the field scattered by a rigid object, the computational domain is usually truncated by a ball of radius R carrying an absorbing boundary condition. This artificial boundary is far from optimal when the scatterer is elongated in one direction. We showed that absorbing boundary conditions of arbitrary order can be built on a prolate spheroidal boundary in three dimensions.</span>
+  </p>
+  <ul class="docs pdfs">
+    <li><a href="spheroidal/Barucq_DupouySaintGuirons_Tordeux_2012.pdf"><span><i>Non-reflecting boundary condition on ellipsoidal boundary</i> — H. Barucq, A.-G. Dupouy Saint-Guirons, S. Tordeux, Numerical Analysis and Applications 5(2), 2012, pp. 109–115</span></a></li>
+    <li><a href="spheroidal/expose_Novossibirsk_2012.pdf"><span><span data-l="fr">Exposé</span><span data-l="en">Talk</span> : <i>Absorbing boundary conditions for an elongated body</i>, Novossibirsk, 2012</span></a></li>
+  </ul>
+</section>
+
+<section>
+  <h2><span data-l="fr">Un exemple : la SER d’une fusée</span><span data-l="en">Example: radar cross-section of a rocket</span></h2>
+  <div class="grid2">
+    <figure class="card"><img src="spheroidal/fusee_maillage_coupe.jpg" alt="" loading="lazy"><figcaption><span data-l="fr">Maillage entre la fusée et la frontière sphéroïdale (coupe)</span><span data-l="en">Mesh between the rocket and the spheroidal boundary (cut)</span></figcaption></figure>
+    <figure class="card"><img src="spheroidal/fusee_maillage.jpg" alt="" loading="lazy"><figcaption><span data-l="fr">La fusée et la frontière sphéroïdale</span><span data-l="en">The rocket and the spheroidal boundary</span></figcaption></figure>
+  </div>
+  <p>
+    <span data-l="fr">Nous comparons les résultats de notre méthode à une solution de référence obtenue par le code CESC du Cerfacs. La surface équivalente radar (SER) de la fusée, en dB, est représentée sur la sphère unité en fonction de l’ordre de la condition aux limites absorbante (CLA).</span>
+    <span data-l="en">We compare our method with a reference solution computed by Cerfacs’ CESC code. The radar cross-section (RCS) of the rocket, in dB, is plotted on the unit sphere for increasing orders of the absorbing boundary condition (ABC).</span>
+  </p>
+  <div class="stack">
+    <figure class="card ref"><img src="spheroidal/ser_reference.jpg" alt="" loading="lazy"><figcaption><span data-l="fr">SER de référence (CESC)</span><span data-l="en">Reference RCS (CESC)</span></figcaption></figure>
+    <div class="card"><figure class="pair"><div><img src="spheroidal/ser_ordre1.jpg" alt="" loading="lazy"><img src="spheroidal/erreur_ordre1.jpg" alt="" loading="lazy"></div><figcaption><span data-l="fr">CLA d’ordre 1 : SER (à gauche) et erreur par rapport à la référence (à droite)</span><span data-l="en">ABC of order 1: RCS (left) and error with respect to the reference (right)</span></figcaption></figure></div>
+    <div class="card"><figure class="pair"><div><img src="spheroidal/ser_ordre5.jpg" alt="" loading="lazy"><img src="spheroidal/erreur_ordre5.jpg" alt="" loading="lazy"></div><figcaption><span data-l="fr">CLA d’ordre 5 : SER (à gauche) et erreur (à droite)</span><span data-l="en">ABC of order 5: RCS (left) and error (right)</span></figcaption></figure></div>
+    <div class="card"><figure class="pair"><div><img src="spheroidal/ser_ordre20.jpg" alt="" loading="lazy"><img src="spheroidal/erreur_ordre20.jpg" alt="" loading="lazy"></div><figcaption><span data-l="fr">CLA d’ordre 20 : SER (à gauche) et erreur (à droite)</span><span data-l="en">ABC of order 20: RCS (left) and error (right)</span></figcaption></figure></div>
+  </div>
+
+  <h3><span data-l="fr">Coupe de la SER en θ = 60°</span><span data-l="en">RCS cut at θ = 60°</span></h3>
+  <p><span data-l="fr">Comparaison d’une coupe de la SER approchée avec la SER de référence calculée par CESC.</span><span data-l="en">A cut of the approximate RCS compared with the CESC reference.</span></p>
+  <div class="grid2 card"><figure><img src="spheroidal/coupe_ordre1.png" alt="" loading="lazy"><figcaption><span data-l="fr">CLA d’ordre 1</span><span data-l="en">ABC of order 1</span></figcaption></figure><figure><img src="spheroidal/coupe_ordre5.png" alt="" loading="lazy"><figcaption><span data-l="fr">CLA d’ordre 5</span><span data-l="en">ABC of order 5</span></figcaption></figure><figure><img src="spheroidal/coupe_ordre10.png" alt="" loading="lazy"><figcaption><span data-l="fr">CLA d’ordre 10</span><span data-l="en">ABC of order 10</span></figcaption></figure><figure><img src="spheroidal/coupe_ordre20.png" alt="" loading="lazy"><figcaption><span data-l="fr">CLA d’ordre 20</span><span data-l="en">ABC of order 20</span></figcaption></figure></div>
+</section>
+
+<section>
+  <h2><span data-l="fr">Les fonctions sphéroïdales angulaires</span><span data-l="en">Angular spheroidal functions</span></h2>
+  <p><span data-l="fr">Ce projet a nécessité le calcul des fonctions sphéroïdales angulaires de première espèce. Voici la partie réelle des premières fonctions Y<sub>mn</sub>.</span><span data-l="en">This project required computing the angular spheroidal functions of the first kind. Below is the real part of the first functions Y<sub>mn</sub>.</span></p>
+  <div class="ymns card"><figure class="ymn"><img src="spheroidal/Y_m0_n0.gif" alt="Y m=0, n=0" loading="lazy" width="192" height="219"><figcaption>m=0, n=0</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m0_n1.gif" alt="Y m=0, n=1" loading="lazy" width="192" height="219"><figcaption>m=0, n=1</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m0_n2.gif" alt="Y m=0, n=2" loading="lazy" width="192" height="219"><figcaption>m=0, n=2</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m0_n3.gif" alt="Y m=0, n=3" loading="lazy" width="192" height="219"><figcaption>m=0, n=3</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m1_n0.gif" alt="Y m=1, n=0" loading="lazy" width="192" height="219"><figcaption>m=1, n=0</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m1_n1.gif" alt="Y m=1, n=1" loading="lazy" width="192" height="219"><figcaption>m=1, n=1</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m1_n2.gif" alt="Y m=1, n=2" loading="lazy" width="192" height="219"><figcaption>m=1, n=2</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m1_n3.gif" alt="Y m=1, n=3" loading="lazy" width="192" height="219"><figcaption>m=1, n=3</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m2_n0.gif" alt="Y m=2, n=0" loading="lazy" width="192" height="219"><figcaption>m=2, n=0</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m2_n1.gif" alt="Y m=2, n=1" loading="lazy" width="192" height="219"><figcaption>m=2, n=1</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m2_n2.gif" alt="Y m=2, n=2" loading="lazy" width="192" height="219"><figcaption>m=2, n=2</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m2_n3.gif" alt="Y m=2, n=3" loading="lazy" width="192" height="219"><figcaption>m=2, n=3</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m3_n0.gif" alt="Y m=3, n=0" loading="lazy" width="192" height="219"><figcaption>m=3, n=0</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m3_n1.gif" alt="Y m=3, n=1" loading="lazy" width="192" height="219"><figcaption>m=3, n=1</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m3_n2.gif" alt="Y m=3, n=2" loading="lazy" width="192" height="219"><figcaption>m=3, n=2</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m3_n3.gif" alt="Y m=3, n=3" loading="lazy" width="192" height="219"><figcaption>m=3, n=3</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m4_n0.gif" alt="Y m=4, n=0" loading="lazy" width="192" height="219"><figcaption>m=4, n=0</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m4_n1.gif" alt="Y m=4, n=1" loading="lazy" width="192" height="219"><figcaption>m=4, n=1</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m4_n2.gif" alt="Y m=4, n=2" loading="lazy" width="192" height="219"><figcaption>m=4, n=2</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m4_n3.gif" alt="Y m=4, n=3" loading="lazy" width="192" height="219"><figcaption>m=4, n=3</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m5_n0.gif" alt="Y m=5, n=0" loading="lazy" width="192" height="219"><figcaption>m=5, n=0</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m5_n1.gif" alt="Y m=5, n=1" loading="lazy" width="192" height="219"><figcaption>m=5, n=1</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m5_n2.gif" alt="Y m=5, n=2" loading="lazy" width="192" height="219"><figcaption>m=5, n=2</figcaption></figure><figure class="ymn"><img src="spheroidal/Y_m5_n3.gif" alt="Y m=5, n=3" loading="lazy" width="192" height="219"><figcaption>m=5, n=3</figcaption></figure></div>
+  <a class="back" href="index.html#accueil">← <span data-l="fr">Retour au site</span><span data-l="en">Back to main site</span></a>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><p>© Sébastien Tordeux</p></div></footer>
+<script src="i18n.js"></script>
+</body>
+</html>
