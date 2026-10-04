@@ -24,9 +24,9 @@
 
 <nav class="topbar">
   <div class="wrap topbar-in">
-    <a class="brand" href="#">S. Tordeux</a>
+    <a class="brand" href="#accueil">S. Tordeux</a>
     <ul class="menu">
-      <li><a href="#recherche"><span data-l="fr">Recherche</span><span data-l="en">Research</span></a></li>
+      <li><a href="#accueil"><span data-l="fr">Accueil</span><span data-l="en">Home</span></a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#encadrement"><span data-l="fr">Encadrement</span><span data-l="en">Students</span></a></li>
       <li><a href="#enseignement"><span data-l="fr">Enseignement</span><span data-l="en">Teaching</span></a></li>
@@ -39,7 +39,8 @@
   </div>
 </nav>
 
-<header class="hero wrap">
+<header class="hero" data-tab="accueil">
+ <div class="wrap hero-in">
   <img class="photo" src="img/photo.jpg" alt="Sébastien Tordeux" width="118" height="118">
   <div>
     <h1>Sébastien Tordeux</h1>
@@ -60,18 +61,22 @@
       <li><a href="https://github.com/stordeux">GitHub</a></li>
     </ul>
   </div>
+ </div>
+ <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,40 C180,80 360,0 540,30 C720,60 900,10 1080,35 C1260,60 1350,30 1440,40 L1440,80 L0,80 Z"/>
+ </svg>
 </header>
 
 <main class="wrap">
 
 <!-- ============ RECHERCHE ============ -->
-<section id="recherche">
+<section id="recherche" data-tab="accueil">
   <h2><span data-l="fr">Recherche</span><span data-l="en">Research</span></h2>
 
-  <p class="tags">
-    <span data-l="fr">Analyse numérique · Analyse appliquée des phénomènes de propagation d'ondes · Éléments finis volumiques et de frontière · Développements asymptotiques raccordés · Modélisation multi-échelle · Modèles réduits</span>
-    <span data-l="en">Numerical analysis · Applied analysis of wave propagation · Volume and boundary finite elements · Matched asymptotic expansions · Multiscale modelling · Reduced-order models</span>
-  </p>
+  <div class="tags">
+    <span data-l="fr"><span class="tag">Analyse numérique</span><span class="tag">Analyse appliquée des phénomènes de propagation d'ondes</span><span class="tag">Éléments finis volumiques et de frontière</span><span class="tag">Développements asymptotiques raccordés</span><span class="tag">Modélisation multi-échelle</span><span class="tag">Modèles réduits</span></span>
+    <span data-l="en"><span class="tag">Numerical analysis</span><span class="tag">Applied analysis of wave propagation</span><span class="tag">Volume and boundary finite elements</span><span class="tag">Matched asymptotic expansions</span><span class="tag">Multiscale modelling</span><span class="tag">Reduced-order models</span></span>
+  </div>
 
   <h3><span data-l="fr">Thèmes</span><span data-l="en">Topics</span></h3>
   <ul class="themes">
@@ -107,7 +112,7 @@
 </section>
 
 <!-- ============ PUBLICATIONS ============ -->
-<section id="publications">
+<section id="publications" data-tab="publications">
   <h2>Publications</h2>
   <p class="aside">
     <span data-l="fr">Liste générée automatiquement depuis</span><span data-l="en">List generated automatically from</span>
@@ -122,11 +127,11 @@
 </section>
 
 <!-- ============ ENCADREMENT ============ -->
-<section id="encadrement">
+<section id="encadrement" data-tab="encadrement">
   <h2><span data-l="fr">Encadrement doctoral</span><span data-l="en">PhD supervision</span></h2>
 
   <h3><span data-l="fr">Thèses en cours</span><span data-l="en">Ongoing</span></h3>
-  <ul class="phd">
+  <ul class="phd ongoing">
     <li><b>Maïlys Lassale</b> <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> S. Pernet)</span> — <i>Vers une méthode de Trefftz nativement adaptée à la modélisation numérique exascale des ondes électromagnétiques</i>. <span class="fund"><span data-l="fr">Bourse</span><span data-l="en">Funding:</span> DGA</span></li>
     <li><b>Andréa Lagardère</b>, 2024– <span class="who">(<span data-l="fr">avec</span><span data-l="en">with</span> G. Sylvand, L.-M. Imbert-Gérard)</span> — <i>Méthode quasi-Trefftz couplée pour l'aéroacoustique</i>. <span class="fund">CIFRE Airbus</span></li>
   </ul>
@@ -146,7 +151,7 @@
 </section>
 
 <!-- ============ ENSEIGNEMENT ============ -->
-<section id="enseignement">
+<section id="enseignement" data-tab="enseignement">
   <h2><span data-l="fr">Enseignement</span><span data-l="en">Teaching</span></h2>
   <p>
     <span data-l="fr">Responsable du Master 1</span><span data-l="en">Head of the first year (M1) of the Master's programme</span>
@@ -154,7 +159,7 @@
   </p>
 
   <h3><span data-l="fr">Polycopiés</span><span data-l="en">Lecture notes</span> (PDF)</h3>
-  <ul class="docs">
+  <ul class="docs pdfs">
     <li><a href="cours/Algebre_numerique.pdf"><span data-l="fr">Algèbre numérique</span><span data-l="en">Numerical linear algebra</span></a></li>
     <li><a href="cours/L3_Lp_Fourier.pdf"><span data-l="fr">Espaces de Lebesgue et transformée de Fourier (L3)</span><span data-l="en">Lebesgue spaces and Fourier transform (L3)</span></a></li>
     <li><a href="cours/AN1.pdf"><span data-l="fr">Méthode des différences finies</span><span data-l="en">Finite difference method</span></a></li>
@@ -167,7 +172,7 @@
 </section>
 
 <!-- ============ CODES ============ -->
-<section id="codes">
+<section id="codes" data-tab="codes">
   <h2>Codes</h2>
   <ul class="docs">
     <li>
@@ -184,7 +189,7 @@
 </section>
 
 <!-- ============ PARCOURS ============ -->
-<section id="parcours">
+<section id="parcours" data-tab="parcours">
   <h2><span data-l="fr">Parcours</span><span data-l="en">Career</span></h2>
   <dl class="cv">
     <dt>2025–</dt>
@@ -219,7 +224,7 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section id="contact">
+<section id="contact" data-tab="accueil">
   <h2>Contact</h2>
   <address>
     LMAP UMR 5142 — <span data-l="fr">2e étage, bâtiment IPRA</span><span data-l="en">2nd floor, IPRA building</span><br>
@@ -231,12 +236,20 @@
 
 </main>
 
-<footer class="wrap foot">
-  © Sébastien Tordeux ·
-  <span data-l="fr">Publications à jour via l'API HAL</span><span data-l="en">Publications kept up to date via the HAL API</span>
+<footer class="foot">
+  <div class="wrap">
+    <div class="logos">
+      <a href="https://www.univ-pau.fr/" title="Université de Pau et des Pays de l'Adour"><img src="img/logos/uppa.png" alt="UPPA" height="44"></a>
+      <a href="https://www.cnrs.fr/" title="CNRS"><img src="img/logos/cnrs.svg" alt="CNRS" height="52"></a>
+      <a href="https://www.inria.fr/" title="Inria"><img src="img/logos/inria.svg" alt="Inria" height="34"></a>
+    </div>
+    <p>© Sébastien Tordeux ·
+    <span data-l="fr">Publications à jour via l'API HAL</span><span data-l="en">Publications kept up to date via the HAL API</span></p>
+  </div>
 </footer>
 
 <script src="i18n.js"></script>
 <script src="hal.js"></script>
+<script src="tabs.js"></script>
 </body>
 </html>

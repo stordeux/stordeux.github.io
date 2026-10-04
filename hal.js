@@ -75,7 +75,7 @@
       var links = '<a href="' + esc(d.uri) + '">HAL</a>';
       if (d.doi) links += '<a href="https://doi.org/' + esc(d.doi) + '">DOI</a>';
       if (d.pdf) links += '<a href="' + esc(d.pdf) + '">PDF</a>';
-      html += '<li>' +
+      html += '<li class="cat-' + d.cat + '">' +
         '<div class="pub-title"><span class="badge">' + esc(t(catLabel.fr, catLabel.en)) + '</span>' + esc(d.title) + '</div>' +
         '<div class="pub-meta">' + authors(d.authors) + '</div>' +
         '<div class="pub-meta">' + esc(d.ref) + '<span class="pub-links">' + links + '</span></div>' +
