@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inversion bayésienne — S. Tordeux</title>
+<meta name="description" content="Inversion bayésienne (MCMC, HMC, EnKF) pour identifier la vitesse du sous-sol à partir de mesures acoustiques de surface.">
+<link rel="icon" href="img/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>(function(){var l;try{l=localStorage.getItem('lang')}catch(e){}if(!l)l=(navigator.language||'fr').slice(0,2)==='fr'?'fr':'en';document.documentElement.lang=l})();</script>
+<style>
+  .page-hero h1 { font-size: 2rem; margin: 0 0 .5rem; }
+  .page-hero .authors { color: #ffd9ae; font-weight: 500; margin: 0; }
+  .lead { font-size: 1.05rem; }
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; }
+  figcaption { color: var(--muted); font-size: .9rem; margin-top: .5rem; text-align: center; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; box-shadow: var(--shadow); }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .stack { display: grid; gap: 1.2rem; }
+  .cta { display: inline-block; margin-top: 1rem; padding: .55rem 1rem; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; }
+  .cta:hover { text-decoration: none; opacity: .9; }
+  .back { display: inline-block; margin-top: 1.5rem; font-weight: 500; }
+  @media (max-width: 640px) { .page-hero h1 { font-size: 1.6rem; } }
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html">S. Tordeux</a>
+    <ul class="menu"><li><a href="index.html#codes">← <span data-l="fr">Retour au site</span><span data-l="en">Back to main site</span></a></li></ul>
+    <button id="lang-toggle" class="lang" type="button" aria-label="Changer de langue / Switch language"><span data-l="fr">EN</span><span data-l="en">FR</span></button>
+  </div>
+</nav>
+
+<header class="hero page-hero">
+  <div class="wrap">
+    <h1><span data-l="fr">Inversion bayésienne pour la propagation d’ondes</span><span data-l="en">Bayesian inversion for wave propagation</span></h1>
+    <p class="authors">Bruno Latre (<span data-l="fr">doctorant</span><span data-l="en">PhD student</span>, Makutu), Hélène Barucq (Inria, Makutu), Mark Asch (Université de Picardie Jules Verne), Sébastien Tordeux</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C180,80 360,0 540,30 C720,60 900,10 1080,35 C1260,60 1350,30 1440,40 L1440,80 L0,80 Z"/></svg>
+</header>
+
+<main class="wrap">
+<section>
+  <p class="lead">
+    <span data-l="fr">On cherche à retrouver la vitesse de propagation <i>c</i> du sous-sol à partir de mesures d’ondes acoustiques enregistrées en surface. Plutôt qu’une seule solution « optimale », l’approche bayésienne fournit une loi a posteriori : la distribution de toutes les vitesses compatibles avec les données et leur bruit. Chaque évaluation de la vraisemblance demande de résoudre l’équation des ondes, ici par une méthode de Galerkin discontinue ; la loi a posteriori est ensuite explorée par des méthodes de Monte-Carlo par chaînes de Markov (Metropolis-Hastings, Monte-Carlo hamiltonien) et par un filtre de Kalman d’ensemble.</span>
+    <span data-l="en">We aim to recover the subsurface wave speed <i>c</i> from acoustic measurements recorded at the surface. Rather than a single “optimal” answer, the Bayesian approach yields a posterior distribution: every wave speed consistent with the data and their noise. Each likelihood evaluation requires solving the wave equation, here with a discontinuous Galerkin method; the posterior is then explored with Markov chain Monte Carlo methods (Metropolis–Hastings, Hamiltonian Monte Carlo) and with an ensemble Kalman filter.</span>
+  </p>
+  <figure class="card"><img src="bayes/onde_instantanes.png" alt="Wave emitted at the surface crossing a sinusoidal layer (discontinuous Galerkin, t = 1, 2, 3, 4): reflections and refractions at the interfaces." loading="lazy" width="1600" height="959"><figcaption>Wave emitted at the surface crossing a sinusoidal layer (discontinuous Galerkin, t = 1, 2, 3, 4): reflections and refractions at the interfaces.</figcaption></figure>
+</section>
+
+<section>
+  <h2><span data-l="fr">De l’a priori à l’a posteriori</span><span data-l="en">From prior to posterior</span></h2>
+  <div class="grid3">
+    <figure class="card"><img src="bayes/enkf_prior_posterior.png" alt="Ensemble Kalman filter: the scattered prior ensemble contracts onto the true value." loading="lazy" width="1600" height="1392"><figcaption>Ensemble Kalman filter: the scattered prior ensemble contracts onto the true value.</figcaption></figure>
+    <figure class="card"><img src="bayes/nuage_MH_HMC.png" alt="Posterior samples from Metropolis–Hastings and Hamiltonian Monte Carlo on the same data." loading="lazy" width="1600" height="1413"><figcaption>Posterior samples from Metropolis–Hastings and Hamiltonian Monte Carlo on the same data.</figcaption></figure>
+    <figure class="card"><img src="bayes/posterior_reference.png" alt="Tabulated posterior density with Hamiltonian Monte Carlo samples (white dots)." loading="lazy" width="1600" height="1253"><figcaption>Tabulated posterior density with Hamiltonian Monte Carlo samples (white dots).</figcaption></figure>
+  </div>
+  <a class="cta" href="bayes_galerie.html"><span data-l="fr">Voir toutes les figures →</span><span data-l="en">See all figures →</span></a>
+</section>
+
+<section>
+  <h2><span data-l="fr">Pour aller plus loin</span><span data-l="en">Further reading</span></h2>
+  <ul class="docs pdfs">
+    <li><a href="https://chi-feng.github.io/mcmc-demo/"><span><span data-l="fr">Démonstration interactive MCMC / HMC (Chi Feng)</span><span data-l="en">Interactive MCMC / HMC demo (Chi Feng)</span></span></a></li>
+    <li><a href="https://commons.wikimedia.org/wiki/File:Hamiltonian_Monte_Carlo.gif"><span><span data-l="fr">Animation du Monte-Carlo hamiltonien (Wikimedia Commons)</span><span data-l="en">Hamiltonian Monte Carlo animation (Wikimedia Commons)</span></span></a></li>
+  </ul>
+  <a class="back" href="index.html#codes">← <span data-l="fr">Retour au site</span><span data-l="en">Back to main site</span></a>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><p>© Sébastien Tordeux</p></div></footer>
+<script src="i18n.js"></script>
+</body>
+</html>

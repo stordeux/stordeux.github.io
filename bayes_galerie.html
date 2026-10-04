@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inversion bayésienne : galerie — S. Tordeux</title>
+<meta name="description" content="Toutes les figures du projet d’inversion bayésienne : problème direct, MCMC, HMC, EnKF, modèle à 10 couches.">
+<link rel="icon" href="img/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>(function(){var l;try{l=localStorage.getItem('lang')}catch(e){}if(!l)l=(navigator.language||'fr').slice(0,2)==='fr'?'fr':'en';document.documentElement.lang=l})();</script>
+<style>
+  .page-hero h1 { font-size: 2rem; margin: 0 0 .5rem; }
+  .page-hero .authors { color: #ffd9ae; font-weight: 500; margin: 0; }
+  .lead { font-size: 1.05rem; }
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; }
+  figcaption { color: var(--muted); font-size: .9rem; margin-top: .5rem; text-align: center; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; box-shadow: var(--shadow); }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .stack { display: grid; gap: 1.2rem; }
+  .cta { display: inline-block; margin-top: 1rem; padding: .55rem 1rem; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; }
+  .cta:hover { text-decoration: none; opacity: .9; }
+  .back { display: inline-block; margin-top: 1.5rem; font-weight: 500; }
+  @media (max-width: 640px) { .page-hero h1 { font-size: 1.6rem; } }
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html">S. Tordeux</a>
+    <ul class="menu"><li><a href="index.html#codes">← <span data-l="fr">Retour au site</span><span data-l="en">Back to main site</span></a></li></ul>
+    <button id="lang-toggle" class="lang" type="button" aria-label="Changer de langue / Switch language"><span data-l="fr">EN</span><span data-l="en">FR</span></button>
+  </div>
+</nav>
+
+<header class="hero page-hero">
+  <div class="wrap">
+    <h1><span data-l="fr">Inversion bayésienne : toutes les figures</span><span data-l="en">Bayesian inversion: all figures</span></h1>
+    <p class="authors">Bruno Latre (<span data-l="fr">doctorant</span><span data-l="en">PhD student</span>, Makutu), Hélène Barucq (Inria, Makutu), Mark Asch (Université de Picardie Jules Verne), Sébastien Tordeux</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C180,80 360,0 540,30 C720,60 900,10 1080,35 C1260,60 1350,30 1440,40 L1440,80 L0,80 Z"/></svg>
+</header>
+
+<main class="wrap">
+<section>
+  <p><a href="bayes.html">← <span data-l="fr">Présentation du projet</span><span data-l="en">Project overview</span></a></p>
+  <h2><span data-l="fr">Le problème direct</span><span data-l="en">The forward problem</span></h2>
+  <p><span data-l="fr">Une source placée en surface émet une onde acoustique, simulée par une méthode de Galerkin discontinue. Ce calcul est répété à chaque évaluation de la vraisemblance.</span><span data-l="en">A source at the surface emits an acoustic wave, simulated with a discontinuous Galerkin method. This computation is repeated at every likelihood evaluation.</span></p>
+  <div class="stack">
+    <figure class="card"><img src="bayes/maillage.png" alt="Finite element mesh of the domain with two sinusoidal interfaces." loading="lazy" width="1600" height="880"><figcaption>Finite element mesh of the domain with two sinusoidal interfaces.</figcaption></figure>
+    <figure class="card"><img src="bayes/onde_instantanes.png" alt="Wave crossing the sinusoidal layer at t = 1, 2, 3, 4." loading="lazy" width="1600" height="959"><figcaption>Wave crossing the sinusoidal layer at t = 1, 2, 3, 4.</figcaption></figure>
+    <figure class="card"><img src="bayes/onde_cercle_instantanes.png" alt="Same propagation with a circular inclusion at t = 1, 2, 3, 4." loading="lazy" width="1600" height="959"><figcaption>Same propagation with a circular inclusion at t = 1, 2, 3, 4.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2><span data-l="fr">Inversion à deux paramètres</span><span data-l="en">Two-parameter inversion</span></h2>
+  <p><span data-l="fr">On cherche les vitesses de deux zones du sous-sol ; la loi a posteriori est explorée par différents algorithmes.</span><span data-l="en">We seek the wave speeds of two subsurface zones; the posterior is explored with several algorithms.</span></p>
+  <div class="grid2">
+    <figure class="card"><img src="bayes/nuage_MH_HMC.png" alt="Metropolis–Hastings vs Hamiltonian Monte Carlo samples, with the true value and the starting point." loading="lazy" width="1600" height="1413"><figcaption>Metropolis–Hastings vs Hamiltonian Monte Carlo samples, with the true value and the starting point.</figcaption></figure>
+    <figure class="card"><img src="bayes/posterior_scatter.png" alt="Posterior samples with the 95% interval, the true value and the initial value." loading="lazy" width="1600" height="1415"><figcaption>Posterior samples with the 95% interval, the true value and the initial value.</figcaption></figure>
+    <figure class="card"><img src="bayes/enkf_prior_posterior.png" alt="Ensemble Kalman filter: prior ensemble contracting onto the truth." loading="lazy" width="1600" height="1392"><figcaption>Ensemble Kalman filter: prior ensemble contracting onto the truth.</figcaption></figure>
+    <figure class="card"><img src="bayes/posterior_reference.png" alt="Tabulated reference posterior density with Hamiltonian Monte Carlo samples." loading="lazy" width="1600" height="1253"><figcaption>Tabulated reference posterior density with Hamiltonian Monte Carlo samples.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2><span data-l="fr">Un modèle à 10 couches</span><span data-l="en">A 10-layer model</span></h2>
+  <div class="grid2">
+    <figure class="card"><img src="bayes/10couches_c_vrai.png" alt="True velocity field, with the source and the sensors." loading="lazy" width="1600" height="1350"><figcaption>True velocity field, with the source and the sensors.</figcaption></figure>
+    <figure class="card"><img src="bayes/10couches_c_estime.png" alt="Velocity field estimated by the posterior mean." loading="lazy" width="1600" height="1349"><figcaption>Velocity field estimated by the posterior mean.</figcaption></figure>
+  </div>
+  <a class="back" href="bayes.html">← <span data-l="fr">Présentation du projet</span><span data-l="en">Project overview</span></a>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><p>© Sébastien Tordeux</p></div></footer>
+<script src="i18n.js"></script>
+</body>
+</html>
