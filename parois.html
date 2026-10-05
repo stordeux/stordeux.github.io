@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parois multiperforées — S. Tordeux</title>
+<meta name="description" content="Modélisation acoustique des parois multiperforées des chambres de combustion (projet ANR APaM) : conductivité de Rayleigh, conditions d’impédance, validation expérimentale ONERA.">
+<link rel="icon" href="img/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>(function(){var l;try{l=localStorage.getItem('lang')}catch(e){}if(!l)l=(navigator.language||'fr').slice(0,2)==='fr'?'fr':'en';document.documentElement.lang=l})();</script>
+<style>
+  .page-hero h1 { font-size: 2rem; margin: 0 0 .5rem; }
+  .page-hero .authors { color: #ffd9ae; font-weight: 500; margin: 0; }
+  .lead { font-size: 1.05rem; }
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; }
+  figcaption { color: var(--muted); font-size: .9rem; margin-top: .5rem; text-align: center; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; box-shadow: var(--shadow); }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .grid-photo { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: start; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .8rem; margin: 1.2rem 0; }
+  .fact { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent-2); border-radius: 10px; padding: .7rem .9rem; box-shadow: var(--shadow); }
+  .fact b { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
+  .back { display: inline-block; margin-top: 1.5rem; font-weight: 500; }
+  @media (max-width: 640px) { .grid-photo { grid-template-columns: 1fr; } .page-hero h1 { font-size: 1.6rem; } }
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html">S. Tordeux</a>
+    <ul class="menu"><li><a href="index.html#accueil">← <span data-l="fr">Retour au site</span><span data-l="en">Back to main site</span></a></li></ul>
+    <button id="lang-toggle" class="lang" type="button" aria-label="Changer de langue / Switch language"><span data-l="fr">EN</span><span data-l="en">FR</span></button>
+  </div>
+</nav>
+
+<header class="hero page-hero">
+  <div class="wrap">
+    <h1><span data-l="fr">Acoustique des parois multiperforées</span><span data-l="en">Acoustics of multiperforated walls</span></h1>
+    <p class="authors">Abderrahmane Bendali (INSA Toulouse, IMT), M’Barek Fares (Cerfacs), Estelle Piot (ONERA), Sophie Laurens, Vincent Popie, Sébastien Tordeux</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C180,80 360,0 540,30 C720,60 900,10 1080,35 C1260,60 1350,30 1440,40 L1440,80 L0,80 Z"/></svg>
+</header>
+
+<main class="wrap">
+<section>
+  <p class="lead">
+    <span data-l="fr">Les parois des chambres de combustion des moteurs d’avion et d’hélicoptère sont percées de milliers de petits trous : l’air injecté à travers ces perforations refroidit la paroi, mais il interagit aussi avec les modes acoustiques de la chambre et peut entretenir des instabilités de combustion. Les codes industriels ignorent ces perforations, beaucoup trop petites et trop nombreuses pour être maillées. Le projet APaM visait à construire des modèles mathématiques et des schémas numériques qui en rendent compte, puis à les valider expérimentalement et industriellement.</span>
+    <span data-l="en">The walls of aircraft and helicopter combustion chambers are drilled with thousands of small holes: air injected through these perforations cools the wall, but it also couples with the acoustic modes of the chamber and can sustain combustion instabilities. Industrial codes ignore these perforations, far too small and too many to be meshed. The APaM project aimed to build mathematical models and numerical schemes that account for them, and to validate them experimentally and industrially.</span>
+  </p>
+  <div class="facts">
+    <div class="fact"><b>ANR</b>APaM — <span data-l="fr">Acoustique et paroi multiperforée</span><span data-l="en">Acoustics and multiperforated wall</span></div>
+    <div class="fact"><b><span data-l="fr">Programme</span><span data-l="en">Programme</span></b>SYSCOMM 2008 · <span data-l="fr">36 mois</span><span data-l="en">36 months</span></div>
+    <div class="fact"><b><span data-l="fr">Coordination</span><span data-l="en">Coordinator</span></b><span data-l="fr">Institut de Mathématiques de Toulouse (A. Bendali)</span><span data-l="en">Toulouse Mathematics Institute (A. Bendali)</span></div>
+    <div class="fact"><b><span data-l="fr">Partenaires</span><span data-l="en">Partners</span></b>Cerfacs · ONERA · Snecma</div>
+  </div>
+  <div class="grid-photo">
+    <figure class="card"><img src="parois/chambre_combustion.jpg" alt="" loading="lazy" width="1600" height="930"><figcaption><span data-l="fr">Paroi multiperforée d’une chambre de combustion (Turbomeca)</span><span data-l="en">Multiperforated wall of a combustion chamber (Turbomeca)</span></figcaption></figure>
+    <figure class="card"><img src="parois/plaque_onera_photo.jpg" alt="" loading="lazy" width="1000" height="1384"><figcaption><span data-l="fr">Plaque perforée testée sur le banc acoustique de l’ONERA</span><span data-l="en">Perforated plate tested on ONERA’s acoustic bench</span></figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2><span data-l="fr">La démarche</span><span data-l="en">Approach</span></h2>
+  <p>
+    <span data-l="fr">Par la méthode des développements asymptotiques raccordés, chaque perforation est remplacée par un modèle effectif : la paroi devient une condition d’impédance portée par une surface sans trous, caractérisée par la conductivité de Rayleigh des ouvertures. Nous avons justifié mathématiquement ce modèle et montré qu’il reste valable dès que la distance entre deux trous voisins est inférieure à une demi-longueur d’onde, bien au-delà de l’hypothèse classique de grande longueur d’onde. Les effets de l’écoulement dans les perforations, d’abord négligés, ont ensuite été pris en compte par une modélisation adaptée aux petites échelles ; les résultats ont été confrontés aux mesures réalisées sur les bancs acoustiques de l’ONERA.</span>
+    <span data-l="en">Using matched asymptotic expansions, each perforation is replaced by an effective model: the wall becomes an impedance condition on a surface without holes, characterised by the Rayleigh conductivity of the apertures. We justified this model mathematically and showed that it holds as soon as the distance between neighbouring holes is less than half a wavelength, well beyond the classical long-wavelength assumption. Flow effects in the perforations, first neglected, were then included through suitable small-scale modelling; the results were compared with measurements on ONERA’s acoustic benches.</span>
+  </p>
+  <div class="grid2">
+    <figure class="card"><img src="parois/maillage_plaque.jpg" alt="" loading="lazy" width="1400" height="1055"><figcaption><span data-l="fr">Maillage d’une plaque multiperforée (vue de dessus)</span><span data-l="en">Mesh of a multiperforated plate (top view)</span></figcaption></figure>
+    <figure class="card"><img src="parois/maillage_3d.jpg" alt="" loading="lazy" width="1400" height="1055"><figcaption><span data-l="fr">Maillage de surface autour des perforations</span><span data-l="en">Surface mesh around the perforations</span></figcaption></figure>
+    <figure class="card"><img src="parois/maillage_trous.png" alt="" loading="lazy" width="1200" height="536"><figcaption><span data-l="fr">Plaque perforée en trois dimensions : les trous traversent l’épaisseur de la paroi</span><span data-l="en">Perforated plate in three dimensions: the holes go through the wall thickness</span></figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <ul class="docs pdfs">
+    <li><a href="https://hal.science/hal-00860712" target="_blank" rel="noopener"><span><i>Mathematical justification of the Rayleigh conductivity model for perforated plates in acoustics</i> — A. Bendali, M. Fares, E. Piot, S. Tordeux, SIAM J. Appl. Math. 73(1), 2013</span></a></li>
+    <li><a href="https://hal.science/hal-00769393" target="_blank" rel="noopener"><span><i>Effective conditions for the reflection of an acoustic wave by low-porosity perforated plates</i> — S. Laurens, E. Piot, A. Bendali, M. Fares, S. Tordeux, J. Fluid Mech. 743, 2014</span></a></li>
+    <li><a href="https://hal.science/hal-00686438" target="_blank" rel="noopener"><span><i>Lower and upper bounds for the Rayleigh conductivity of a perforated plate</i> — S. Laurens, S. Tordeux, A. Bendali, M. Fares, P. R. Kotiuga, M2AN 47(6), 2013</span></a></li>
+    <li><a href="https://hal.science/hal-00723234" target="_blank" rel="noopener"><span><i>Explicit computation of the electrostatic energy for an elliptical charged disc</i> — S. Laurens, S. Tordeux, Appl. Math. Letters 26(2), 2013</span></a></li>
+    <li><a href="https://hal.science/hal-00686434" target="_blank" rel="noopener"><span><i>Numerical study of acoustic multiperforated plates</i> — A. Bendali, M. Fares, S. Laurens, S. Tordeux, ESAIM: Proceedings 37, 2012, pp. 166–177</span></a></li>
+    <li><a href="https://theses.fr/2016ESAE0001" target="_blank" rel="noopener"><span><i>Modélisation asymptotique de la réponse acoustique de plaques perforées dans un cadre linéaire avec étude des effets visqueux</i> — <span data-l="fr">thèse de</span><span data-l="en">PhD thesis of</span> V. Popie, ONERA – ISAE, 2016</span></a></li>
+  </ul>
+  <p class="aside"><span data-l="fr">Présentation du projet sur le site de l’ANR :</span><span data-l="en">Project page on the ANR website:</span> <a href="https://anr.fr/Projet-ANR-08-SYSC-0001" target="_blank" rel="noopener">ANR-08-SYSC-0001</a></p>
+  <a class="back" href="index.html#accueil">← <span data-l="fr">Retour au site</span><span data-l="en">Back to main site</span></a>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><p>© Sébastien Tordeux</p></div></footer>
+<script src="i18n.js"></script>
+</body>
+</html>
