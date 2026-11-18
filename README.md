@@ -8,3 +8,6 @@ Page personnelle de Sébastien Tordeux — https://stordeux.github.io
 - `exposes/` : exposés
 
 Mettre à jour un poly : `powershell -File maj_polys.ps1` (copie depuis Dropbox, commit, push).
+
+Visites : compteur GoatCounter (sans cookie) en bas de chaque page HTML, tableau de bord https://stordeux.goatcounter.com.
+**Toute nouvelle page doit recevoir la même ligne** (voir `index.html`, juste avant `</body>`).
