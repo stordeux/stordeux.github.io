@@ -216,6 +216,11 @@ ol.pubs li {
 .cat-ART { --cat: var(--c-art); } .cat-COMM { --cat: var(--c-comm); } .cat-COUV { --cat: var(--c-couv); }
 .cat-REPORT { --cat: var(--c-report); } .cat-PRE { --cat: var(--c-pre); } .cat-THESE { --cat: var(--c-these); }
 .cat-OTHER { --cat: var(--c-other); }
+.wip-badge { background: var(--warm); }
+.wip {
+  border-left: 4px solid var(--warm); background: var(--surface); box-shadow: var(--shadow);
+  border-radius: 8px; padding: .6rem .9rem; font-size: .95rem;
+}
 
 /* ---------- Pied de page ---------- */
 .foot { background: var(--nav); color: var(--nav-text); font-size: .85rem; padding: 1.75rem 0 1.5rem; margin-top: 2rem; }
